@@ -1,83 +1,44 @@
 <html>
 <head>
-<title>Kalkulator Modifikasi</title>
 <style>
 body
 {
-background-color:#e6e6ff;
+background-color:tan;
 }
 h2
 {
 text-align:center;
-font-family: "Trebuchet MS", Helvetica, sans-serif;
-font-size:35px;
-font-weight: 100;
-}
-h3
-{
-text-align:center;
-font-family: "Trebuchet MS", Helvetica, sans-serif;
-font-size:13px;
-font-weight: 100;
+text-decoration:underline;
 }
 .box
 {
-background-color:#cccccc;
-height:520px;
-width:640px;
-border-radius:5px;
+background-color:#3d4543;
+height:300px;
+width:322px;
+border-radius:10px;
 position:relative;
-top:10px;
-left:26%;
-}
-.box2
-{
-background-color:#737373;
-height:560px;
-width:640px;
-border-radius:5px;
-position:relative;
-top:10px;
-bottom:200px;
-left:26%;
-}
-.box3
-{
-background-color:#1a1a1a;
-height:60px;
-width:640px;
-border-radius:5px;
-position:relative;
-top:10px;
-bottom:200px;
-left:26%;
-text-align:center;
-font-family: "Trebuchet MS", Helvetica, sans-serif;
-font-size:15px;
-font-weight: 100;
-color:white;
+top:80px;
+left:40%;
 }
 .display
 {
 background-color:#222;
-width:610px;
+width:295px;
 position:relative;
 left:15px;
 top:20px;
-height:100px;
+height:40px;
 }
 .display input
 {
 position:relative;
 left:2px;
 top:2px;
-height:96px;
+height:35px;
 color:black;
-background-color:#000000;
-font-size:55px;
+background-color:#bccd95;
+font-size:29px;
 text-align:right;
-color:#ffffff;
-font-family: "Courier New", Courier, monospace;
 }
 .keys
 {
@@ -86,124 +47,65 @@ top:15px;
 }
 .button
 {
-width:120px;
-height:80px;
+width:40px;
+height:30px;
 border:none;
-border-radius:1px;
-margin-left:1px;
+border-radius:8px;
+margin-left:17px;
 cursor:pointer;
 border-top:2px solid transparent;
-font-size:40px;
-font-family: "Courier New", Courier, monospace;
 }
-.buttonthick
+.buttonleft
 {
-width:120px;
-height:120px;
+width:40px;
+height:30px;
 border:none;
-border-radius:1px;
-margin-left:1px;
+border-radius:8px;
+margin-left:78px;
 cursor:pointer;
 border-top:2px solid transparent;
-font-size:70px;
-font-family: "Courier New", Courier, monospace;
 }
-.buttonbigfours
+.buttonlong
 {
-width:245px;
-height:80px;
+width:160px;
+height:30px;
 border:none;
-border-radius:1px;
-margin-left:1px;
+border-radius:8px;
+margin-left:78px;
 cursor:pointer;
 border-top:2px solid transparent;
-font-size:40px;
-font-family: "Courier New", Courier, monospace;
-}
-.buttonbigfoursthick
-{
-width:245px;
-height:120px;
-border:none;
-border-radius:1px;
-margin-left:1px;
-cursor:pointer;
-border-top:2px solid transparent;
-font-size:70px;
-font-family: "Courier New", Courier, monospace;
 }
 .button.gray
 {
 color:white;
-background-color:#6f6f6f;
+background-color:#28cc7a;
 border-bottom:black 2px solid;
 border-top:2px #6f6f6f solid;
 }
 .button.pink
 {
 color:black;
-background-color:#dd99ff;
-border-bottom:black 2px solid;
-}
-.buttonthick.pink
-{
-color:black;
-background-color:#dd99ff;
+background-color:#23b2b2;
 border-bottom:black 2px solid;
 }
 .button.black
 {
 color:white;
-background-color:303030;
+background-color:#28cc7a;
 border-bottom:black 2px solid;
 border-top:2px 303030 solid;
 }
-.button.greyone
+.buttonleft.black
 {
 color:white;
-background-color:303030;
-border-bottom:black 2px solid;
-border-top:2px 303030 solid;
-}
-.buttonbigfoursthick.greytwo
-{
-color:white;
-background-color:303030;
-border-bottom:black 2px solid;
-border-top:2px 303030 solid;
-}
-.buttonbigfours.black
-{
-color:white;
-background-color:303030;
+background-color:#28cc7a;
 border-bottom:black 2px solid;
 border-top:2px 303030 solid;
 }
 .button.orange
 {
 color:black;
-background-color:CCFF99;
-border-bottom:black 2px solid;
-border-top:2px FF9933 solid;
-}
-.buttonbigfours.orange
-{
-color:black;
-background-color:CCFF99;
-border-bottom:black 2px solid;
-border-top:2px FF9933 solid;
-}
-.buttonbigfours.red
-{
-color:black;
-background-color:FF0000;
-border-bottom:black 2px solid;
-border-top:2px FF9933 solid;
-}
-.button.red
-{
-color:black;
-background-color:FF0000;
+background-color:FF9933;
 border-bottom:black 2px solid;
 border-top:2px FF9933 solid;
 }
@@ -253,105 +155,42 @@ function e()
 	  c('Error') 
 	} 
 }
-
-function c2(val2)
-{
-	document.getElementById("d2").value=val2;
-}
-function v2(val2)
-{
-	document.getElementById("d2").value+=val2;
-}
-function e2() 
-{ 
-	try 
-	{ 
-	  c2(eval(document.getElementById("d2").value)) 
-	} 
-	catch(e2) 
-	{
-	  c2('Error') 
-	} 
-}
 </script>
 </head>
 <body>
-<h2>Kalkulator Normal</h2>
+
 <div class="box">
-	<div class="display"><input type="text" readonly size="18" id="d"></div>
+	<div class="display"><input type="text" readonly size="15" id="d"></div>
 	<div class="keys">
-		<p>&nbsp
-			<input type="button" class="button black" value="7" onclick='v("7")'>
+		<p>
+			<input type="button" class="buttonleft black" value="7" onclick='v("7")'>
 			<input type="button" class="button black" value="8" onclick='v("8")'>
 			<input type="button" class="button black" value="9" onclick='v("9")'>
-			<input type="button" class="buttonbigfours red" value="C" onclick='c("")'>
 		</p>
-		<p>&nbsp
-			<input type="button" class="button black" value="4" onclick='v("4")'>
-			<input type="button" class="button black" value="5" onclick='v("5")'>
-			<input type="button" class="button black" value="6" onclick='v("6")'>
+		<p>
 			<input type="button" class="button pink" value="*" onclick='v("*")'>
-			<input type="button" class="button pink" value="/" onclick='v("/")'>
+			<input type="button" class="button black" value="6" onclick='v("6")'>
+			<input type="button" class="button black" value="5" onclick='v("5")'>
+			<input type="button" class="button black" value="4" onclick='v("4")'>
+			<input type="button" class="button pink" value="-" onclick='v("-")'>
 		</p>
-		<p>&nbsp
+		<p>
+			<input type="button" class="button pink" value="/" onclick='v("/")'>
 			<input type="button" class="button black" value="1" onclick='v("1")'>
 			<input type="button" class="button black" value="2" onclick='v("2")'>
 			<input type="button" class="button black" value="3" onclick='v("3")'>
 			<input type="button" class="button pink" value="+" onclick='v("+")'>
-			<input type="button" class="button pink" value="-" onclick='v("-")'>
 		</p>
-		<p>&nbsp
-			<input type="button" class="buttonbigfours black" value="0" onclick='v("0")'>
-			<input type="button" class="button black" value="." onclick='v(".")'>
-			<input type="button" class="buttonbigfours orange" value="=" onclick='e()'>
-			
+		<p>
+			<input type="button" class="buttonleft black" value="." onclick='v(".")'>
+			<input type="button" class="button black" value="0" onclick='v("0")'>
+			<input type="button" class="button black" value="C" onclick='c("")'>
+		</p>
+		<p>
+			<input type="button" class="buttonlong green" value="=" onclick='e()'>
 		</p>
 	</div>
 </div>
-<br><br><br>
-<h2>Kalkulator Modifikasi</h2>
-<div class="box2">
-	<div class="display"><input type="text" readonly size="18" id="d2"></div>
-	<div class="keys">
-		<p>&nbsp
-			<input type="button" class="button greyone" value="6" onclick='v2("6")'>
-			<input type="button" class="button greyone" value="7" onclick='v2("7")'>
-			<input type="button" class="button greyone" value="8" onclick='v2("8")'>
-			<input type="button" class="button greyone" value="9" onclick='v2("9")'>
-			<input type="button" class="button red" value="C" onclick='c2("")'>
-		</p>
-		<p>&nbsp
-			<input type="button" class="buttonbigfoursthick greytwo" value="5" onclick='v2("5")'>
-			<input type="button" class="buttonbigfoursthick greytwo" value="0" onclick='v2("0")'>
-			<input type="button" class="buttonthick pink" value="+" onclick='v2("+")'>
-		</p>
-		<p>&nbsp
-			<input type="button" class="button greyone" value="1" onclick='v2("1")'>
-			<input type="button" class="button greyone" value="2" onclick='v2("2")'>
-			<input type="button" class="button greyone" value="3" onclick='v2("3")'>
-			<input type="button" class="button greyone" value="4" onclick='v2("4")'>
-			<input type="button" class="button pink" value="-" onclick='v2("-")'>
-		</p>
-		<p>&nbsp
-			<input type="button" class="button black" value="." onclick='v2(".")'>
-			<input type="button" class="button pink" value="*" onclick='v2("*")'>
-			<input type="button" class="button pink" value="/" onclick='v2("/")'>
-			<input type="button" class="buttonbigfours orange" value="=" onclick='e2()'>
-		</p>
-	</div>
-	
-</div>
-<br><br>
-<div class="box3">
-	Setelah menggunakan kalkulator, mohon mengisi form Survei Kepuasan Pengguna Kalkulator Modifikasi untuk membantu pengembangan dan perbaikan desain kalkulator. Untuk mengisi, klik <a href="http://goo.gl/forms/tQZnfvl4gx">disini</a>.
-</div>	
-	<br><br>
-<h3>
-	Muhammad Faris Musthafa<br>
-	5113100131<br>
-	Interaksi Manusia dan Komputer
-</h3>
-
 
 </body>
 </html>
